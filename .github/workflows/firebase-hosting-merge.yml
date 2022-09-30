@@ -17,11 +17,14 @@ jobs:
         with:
           node-version: "16"
 
-      - name: npm install
+      - name: Run npm install
         run: npm install
 
       - name: npm run build
         run: npm run build
+
+      - name: Run ls -a
+        run: ls -a
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
